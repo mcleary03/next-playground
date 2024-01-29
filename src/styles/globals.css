@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  @apply text-primary;
+  @apply bg-secondary;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @apply bg-primary;
+    @apply text-secondary;
+  }
+}
+
+body {
+  background: inherit;
+  color: inherit;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
