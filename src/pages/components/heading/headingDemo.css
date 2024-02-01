@@ -1,0 +1,4 @@
+.headingDemo {
+  --headingDemoColor: inherit;
+  color: var(--headingDemoColor);
+}

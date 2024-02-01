@@ -13,7 +13,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: colors.neutral[800],
-        secondary: colors.slate[200],
+        secondary: colors.neutral[200],
       },
     },
   },
