@@ -14,6 +14,7 @@ const config: Config = {
       colors: {
         primary: colors.neutral[800],
         secondary: colors.neutral[200],
+        primaryAccent: colors.blue[500],
       },
     },
   },

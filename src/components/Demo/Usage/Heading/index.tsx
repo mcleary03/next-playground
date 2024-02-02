@@ -4,35 +4,96 @@ interface UsageProps {
   componentName: string
 }
 
-const code = `<Heading
+const props = `heading: string
+subHeading?: string
+level?: HeadingLevel
+className?: string
+`
+
+const codeWithHeading = `<Heading
   level={1}
   heading="Heading"
 />`
 
+const codeWithSubHeading = `<Heading
+  level={1}
+  heading="My Heading"
+  subHeading="My Sub Heading"
+/>`
+
+type ComponentUsage = {
+  componentName: string
+  props: string
+  examples: [
+    {
+      description: string
+      code: string
+    }
+  ]
+}
+
 const Usage = ({ componentName }: UsageProps) => {
+  const demoComponent = componentName as unknown as JSX.IntrinsicElements
 
   return (
     <section>
       <section className="my-8">
         <Heading level={2} heading="Props" />
-        <ul className="prose dark:prose-invert">
-          <li>heading: string</li>
-          <li>subHeading?: string</li>
-          <li>level?: HeadingLevel</li>
-          <li>className?: string</li>
-        </ul>
+        <pre className="prose">
+          {props}
+        </pre>
       </section>
       <section className="my-8">
+        <Heading level={2} heading="Usage" />
         <Heading
-          level={2}
-          heading="Example"
+          level={3}
+          heading="Heading Only"
         />
-        <pre>
-          {code}
+        <pre className="prose">
+          {codeWithHeading}
+        </pre>
+        <Heading
+          level={3}
+          heading="With Sub Heading"
+        />
+        <pre className="prose">
+          {codeWithSubHeading}
         </pre>
       </section>
     </section>
   )
 }
+
+// const Usage = ({ componentName }: UsageProps) => {
+//   const demoComponent = componentName as unknown as JSX.IntrinsicElements
+
+//   return (
+//     <section>
+//       <section className="my-8">
+//         <Heading level={2} heading="Props" />
+//         <pre className="prose">
+//           {props}
+//         </pre>
+//       </section>
+//       <section className="my-8">
+//         <Heading level={2} heading="Usage" />
+//         <Heading
+//           level={3}
+//           heading="Heading Only"
+//         />
+//         <pre>
+//           {codeWithHeading}
+//         </pre>
+//         <Heading
+//           level={3}
+//           heading="With Sub Heading"
+//         />
+//         <pre>
+//           {codeWithSubHeading}
+//         </pre>
+//       </section>
+//     </section>
+//   )
+// }
 
 export default Usage
