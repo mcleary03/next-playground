@@ -1,5 +1,7 @@
-import Button from "@/components/Button"
-import Heading from "@/components/Heading"
+"use client"
+
+import Button from "components/Button"
+import Heading from "components/Heading"
 
 const handleClick: React.MouseEventHandler<HTMLButtonElement> = (e) => {
   console.log(e.target)

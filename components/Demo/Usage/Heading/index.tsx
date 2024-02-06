@@ -1,4 +1,4 @@
-import Heading from "@/components/Heading"
+import Heading from "components/Heading"
 
 interface UsageProps {
   componentName: string
@@ -43,19 +43,23 @@ const Usage = ({ componentName }: UsageProps) => {
           {props}
         </pre>
       </section>
+      <hr className="border-4 border-accent-blue-light" />
       <section className="my-8">
         <Heading level={2} heading="Usage" />
         <Heading
           level={3}
           heading="Heading Only"
         />
+        This is what plain text looks like underneath a Heading
         <pre className="prose">
           {codeWithHeading}
         </pre>
         <Heading
           level={3}
           heading="With Sub Heading"
+          subHeading="This is a sub heading"
         />
+        This is what plain text looks like underneath a SubHeading
         <pre className="prose">
           {codeWithSubHeading}
         </pre>

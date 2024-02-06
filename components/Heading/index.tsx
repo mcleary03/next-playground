@@ -1,3 +1,5 @@
+"use client"
+
 export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6
 export interface HeadingProps {
   heading: string
@@ -10,9 +12,7 @@ const Heading = ({ heading, subHeading, level=1, className='' }: HeadingProps) =
   type Heading = `h${typeof level}`
   const HeadingTag: Heading = `h${level}`
 
-  const twClasses = `
-    prose
-    dark:prose-invert
+  return <header className={`${`
     prose-headings:m-0
     prose-headings:font-bold
     prose-h1:text-6xl
@@ -35,10 +35,9 @@ const Heading = ({ heading, subHeading, level=1, className='' }: HeadingProps) =
     prose-p:has-[h4]:text-xl
     prose-p:has-[h5]:text-lg
     prose-p:has-[h6]:text-base
+    prose-p:has-[h1,h2,h3,h4,h5,h6]:text-accent-purple-dark
     my-4
-  `
-
-  return <header className={twClasses + className}>
+  `} ${className}`}>
     <HeadingTag>{heading}</HeadingTag>
     <p>{subHeading}</p>
   </header>
