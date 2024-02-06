@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-black: 18 18 18;
+    --color-white: 245 245 250;
+    --color-primary: 130 110 151;
+    --color-secondary-text: 87 87 87;
+
+    --color-secondary-bg: 26 26 26;
+
+    --color-purple-light: 204 136 253;
+    --color-purple-dark: 166 100 214;
+
+    --color-blue-dark: 21, 7, 152;
+    --color-blue-light: 142, 129, 251;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary-text: rgb(var(--color-white));
+      --secondary-text: rgb(var(--color-secondary-text));
+      --primary-bg: rgb(var(--color-black));
+      --secondary-bg: rgb(var(--color-secondary-bg));
+      --accent-purple-light: rgb(var(--color-purple-light));
+      --accent-purple-dark: rgb(var(--color-purple-dark));
+      --accent-blue-light: rgb(var(--color-blue-light));
+      --accent-blue-dark: rgb(var(--color-blue-dark));
+      --bg-gradient: radial-gradient(
+        circle farthest-side at -80% 180% in hsl shorter hue,
+        rgb(var(--color-blue-dark)),
+        var(--primary-bg)
+      );
+    }
+  }
+}
+
+body {
+  background-color: var(--primary-bg);
+}
+
+#app {
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+}

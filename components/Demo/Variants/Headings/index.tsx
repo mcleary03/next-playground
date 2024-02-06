@@ -1,4 +1,4 @@
-import Heading, { HeadingLevel } from "@/components/Heading"
+import Heading, { HeadingLevel } from "components/Heading"
 
 interface HeadingsProps {
   heading?: string

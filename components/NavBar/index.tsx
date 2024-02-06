@@ -1,24 +1,29 @@
 import Image from 'next/image'
+import Link from 'next/link';
 
 const pages = [
   {
     name: 'Button',
-    href: '#button',
+    href: 'playground/button',
   },
   {
     name: 'Heading',
-    href: '#heading',
+    href: 'playground/heading',
   },
   {
     name: 'NavBar',
-    href: '#navbar',
+    href: 'playground/navbar',
+  },
+  {
+    name: 'Divider',
+    href: 'playground/divider',
   },
 ]
 
 const NavBar = () => {
 
   return (
-    <nav className="sticky top-0 left-0 w-48 h-fit p-10 bg-slate-800">
+    <nav className="sticky top-0 left-0 h-svh w-48 p-10">
       <Image
         className="dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
         src="/next.svg"
@@ -28,10 +33,10 @@ const NavBar = () => {
         priority
       />
       <hr className='my-10' />
-      <ul className="prose dark:invert prose-a:no-underline prose-li:mb4">
+      <ul className="prose prose-a:no-underline prose-li:mb4">
         {pages.map(({ name, href }) => (
           <li key={name} className="mb-4">
-            <a href={href}>{name}</a>
+            <Link className='text-2xl' href={href}>{name}</Link>
           </li>
         ))}
       </ul>
