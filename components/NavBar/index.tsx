@@ -4,19 +4,19 @@ import Link from 'next/link';
 const pages = [
   {
     name: 'Button',
-    href: 'playground/button',
+    href: '/playground/button',
   },
   {
     name: 'Heading',
-    href: 'playground/heading',
+    href: '/playground/heading',
   },
   {
     name: 'NavBar',
-    href: 'playground/navbar',
+    href: '/playground/navbar',
   },
   {
     name: 'Divider',
-    href: 'playground/divider',
+    href: '/playground/divider',
   },
 ]
 

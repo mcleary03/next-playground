@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Usage from 'components/Demo/Usage/Heading'
 // import './headingDemo.css'
 import Controller from './Controller'
-import Heading from '@/components/Heading'
+import Heading from 'components/Heading'
 
 const HeadingDemo = () => {
   const [heading, setHeading] = useState('Heading')

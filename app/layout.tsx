@@ -1,5 +1,5 @@
 import 'styles/globals.css'
-import NavBar from '@/components/NavBar'
+import NavBar from 'components/NavBar'
 import { Suspense } from 'react';
 import { Metadata } from 'next';
 
