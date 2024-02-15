@@ -11,15 +11,8 @@ const Button = ({
   children,
   onClick,
   type = 'button',
-  color = 'primary',
-  size,
   classes = ''
 }: ButtonProps) => {
-  const pallette = {
-    primary: color === 'primary' ? 'primary' : 'secondary',
-    accent: color === 'primary' ? 'secondary' : 'primary',
-  }
-
   return <button
     type={type}
     className={`

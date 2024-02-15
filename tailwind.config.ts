@@ -3,12 +3,15 @@ import type { Config } from "tailwindcss"
 import typography from '@tailwindcss/typography'
 
 const config: Config = {
-  purge: [
-    "./app/**/*.{js,ts,jsx,tsx,css}",
-    "./components/**/*.{js,ts,jsx,tsx,css}",
-    "./pages/**/*.{js,ts,jsx,tsx,css}",
-    "./styles/**/*.{js,ts,jsx,tsx,css}",
-  ],
+  purge: {
+    enabled: true,
+    content: [
+      "./app/**/*.{js,ts,jsx,tsx,css}",
+      "./components/**/*.{js,ts,jsx,tsx,css}",
+      "./pages/**/*.{js,ts,jsx,tsx,css}",
+      "./styles/**/*.{js,ts,jsx,tsx,css}",
+    ],
+  },
   content: [
     "./app/**/*.{js,ts,jsx,tsx,css}",
     "./components/**/*.{js,ts,jsx,tsx,css}",
@@ -45,10 +48,10 @@ const config: Config = {
             color: "var(--primary-text)",
             a: {
               fontWeight: "bold",
-              color: "var(--accent-purple-light)",
+              color: "var(--accent-blue-light)",
               borderBottom: "2px solid var(--bg-primary-bg)",
               "&:hover": {
-                color: "var(--accent-blue-light);",
+                color: "var(--accent-purple-light);",
               },
             },
             "h1, h2, h3, h4, h5, h6": {
@@ -58,8 +61,9 @@ const config: Config = {
               color: "var(secondary-text)",
             },
             pre: {
-              color: "rgb(var(--color-heading))",
+              color: "rgb(var(--color-white))",
               backgroundColor: "var(--secondary-bg)",
+              tabSize: 2,
             },
           },
         },

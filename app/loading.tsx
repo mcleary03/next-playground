@@ -1,6 +1,6 @@
 const Loading = () => {
   return (
-    <div>
+    <div className="mx-auto -my-10">
       <p>Loading...</p>
     </div>
   )

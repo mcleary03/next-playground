@@ -1,6 +1,11 @@
-const App = () => {
+import Heading from "@/components/Heading"
+
+const App = async () => {
+
   return (
-    <h1>Landing Page Placeholder</h1>
+    <>
+      <Heading heading="Landing Page" />
+    </>
   )
 }
 

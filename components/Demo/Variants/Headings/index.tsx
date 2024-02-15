@@ -1,4 +1,4 @@
-import Heading, { HeadingLevel } from "components/Heading"
+import Heading, { HeadingDefinition } from "components/Heading"
 
 interface HeadingsProps {
   heading?: string
@@ -12,7 +12,7 @@ const Headings = ({ heading, subHeading }: HeadingsProps) => (
       (new Array(6)).fill(0).map((_, i) => (
         <Heading
           key={i + 1}
-          level={i + 1 as HeadingLevel}
+          level={i + 1 as typeof HeadingDefinition.level.typeof}
           heading={heading || `Heading Level ${i + 1}`}
           subHeading={subHeading || 'Sub Heading'}
         />

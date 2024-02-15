@@ -16,6 +16,17 @@
 
     --color-blue-dark: 21, 7, 152;
     --color-blue-light: 142, 129, 251;
+
+
+    --primary-text: rgb(var(--color-black));
+    --secondary-text: rgb(var(--color-white));
+    --primary-bg: rgb(var(--color-white));
+    /* same for both themes -- might not need to set these twice */
+    --secondary-bg: rgb(var(--color-secondary-bg));
+    --accent-purple-light: rgb(var(--color-purple-light));
+    --accent-purple-dark: rgb(var(--color-purple-dark));
+    --accent-blue-light: rgb(var(--color-blue-light));
+    --accent-blue-dark: rgb(var(--color-blue-dark));
   }
 
   @media (prefers-color-scheme: dark) {
@@ -28,20 +39,11 @@
       --accent-purple-dark: rgb(var(--color-purple-dark));
       --accent-blue-light: rgb(var(--color-blue-light));
       --accent-blue-dark: rgb(var(--color-blue-dark));
-      --bg-gradient: radial-gradient(
-        circle farthest-side at -80% 180% in hsl shorter hue,
-        rgb(var(--color-blue-dark)),
-        var(--primary-bg)
-      );
     }
   }
 }
 
 body {
+  width: 100svw;
   background-color: var(--primary-bg);
-}
-
-#app {
-  background-image: var(--bg-gradient);
-  background-attachment: fixed;
 }
